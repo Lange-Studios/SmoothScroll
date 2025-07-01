@@ -30,7 +30,7 @@ var drag_with_touch := true
 @export
 var just_snap_under := 0.4
 ## Margin of the currently focused element
-@export_range(0, 50)
+@export
 var follow_focus_margin := 20
 ## Makes the container scrollable vertically
 @export
