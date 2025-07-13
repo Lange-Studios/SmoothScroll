@@ -269,6 +269,9 @@ func _gui_input(event: InputEvent) -> void:
 	if (event is InputEventScreenDrag and drag_with_touch) \
 			or (event is InputEventMouseMotion and drag_with_mouse):
 		if content_dragging:
+			OS.has_feature("mobile"):
+				event.relative.x /= 2
+				event.relative.y /= 2
 			if should_scroll_horizontal():
 				drag_temp_data[0] += event.relative.x
 			if should_scroll_vertical():
