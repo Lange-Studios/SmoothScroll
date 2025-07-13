@@ -19,6 +19,10 @@ var _factor := 10000.0:
 var minimum_velocity := 0.4:
 	set(val): minimum_velocity = max(val, 0.001)
 
+static func new_drag() -> ExpoScrollDamper:
+	var val = ExpoScrollDamper.new()
+	val.friction = 1
+	return val
 
 func _calculate_velocity_by_time(time: float) -> float:
 	var minimum_time = _calculate_time_by_velocity(minimum_velocity)

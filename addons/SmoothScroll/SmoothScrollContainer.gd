@@ -17,7 +17,7 @@ var wheel_scroll_damper: ScrollDamper = ExpoScrollDamper.new()
 @export_group("Dragging")
 ## ScrollDamper for dragging
 @export
-var dragging_scroll_damper: ScrollDamper = ExpoScrollDamper.new()
+var dragging_scroll_damper: ScrollDamper = ExpoScrollDamper.new_drag()
 ### Allow dragging with mouse or not
 @export
 var drag_with_mouse := true
